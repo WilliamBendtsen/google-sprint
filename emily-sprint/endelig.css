@@ -1,0 +1,82 @@
+#logo-bog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+
+}
+
+/* ikonerne søgefelt og burger */
+
+.fa-bars {
+    margin-left: 240px;
+}
+
+.fa-search {
+    margin-left: 210px;
+}
+   
+
+/* den "bølgede" streg under header */
+
+.wavy-line {
+    width: 100%;
+    height: 15px;
+    background-color: #0074D9;
+    position: relative;
+}
+
+.wavy-line::before,
+.wavy-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px; 
+  background-color: #0074D9;
+  border-radius: 50%;
+}
+
+.wavy-line::before {
+    top: -15px;
+}
+
+.wavy-line::after {
+    bottom: -15px;
+}
+
+
+/* siden der flyder ud over den originale side */
+
+.book {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+  }
+  
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    transition: transform 1s ease;
+  }
+  
+  .page:nth-child(even) {
+    background-color: #8295cb; /* Baggrundsfarve for lige sider */
+  }
+  
+  .page img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 50px auto;
+  }
+
+  
+  
+  /* Styr bladringen */
+  .book:hover .page {
+    transform: translateX(50%);
+  }

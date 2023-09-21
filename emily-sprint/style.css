@@ -1,0 +1,109 @@
+#logo-bog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+
+}
+
+/* ikonerne søgefelt og burger */
+
+.search-container {
+    position: absolute;
+    top: 20px; /* Juster top-margin efter behov */
+    right: 20px; /* Placer søgefeltet til højre på siden */
+
+}
+
+#search-field {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    transition: width 0.3s ease; /* Tilføj en glidende overgangseffekt */
+}
+
+#search-field:focus {
+    width: 300px; /* Udvid søgefeltet ved fokus */
+}
+
+   
+
+/* den "bølgede" streg under header */
+
+.wavy-line {
+    width: 100%;
+    height: 15px;
+    background-color: #0074D9;
+    position: relative;
+}
+
+.wavy-line::before,
+.wavy-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15px; 
+  background-color: #0074D9;
+  border-radius: 50%;
+}
+
+.wavy-line::before {
+    top: -15px;
+}
+
+.wavy-line::after {
+    bottom: -15px;
+}
+
+
+/* ikonet hopper når jeg holder musen over det */
+
+/* den er rykket over til højre side */
+.menu-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0; /* Placer burgermenuen i højre hjørne */
+    padding: 20px; /* Tilføj en passende padding for afstand fra kanten */
+    z-index: 999; /* Juster z-index efter behov */
+}
+
+.burger-menu {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 1.5s; /* Tilføj en glidende overgangseffekt */
+
+}
+
+
+.burger-menu:hover {
+    transform: scale(1.5); /* Skaler burger-ikonet op ved hover */
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-left: 200px;
+   
+}
+
+.container section {
+    margin-top: 25px;
+    margin-right: 20px;
+    text-align: center;
+    padding: 20px;
+    width: 100px;
+    background-color: #0074D9;
+    height: 350px;
+    
+}
