@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: montserrat, sans-serif;
+    background: linear-gradient(180deg, #6d74f7, #6ee9e9);
+}
+
+/* Navigationsbar */
+nav{
+    background: white;
+}
+
+#dokk1-logo{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 7%;
+    animation: mySlide;
+    animation-duration: 5s;
+}
+
+/* animation på dokk1 logo */
+@keyframes mySlide{
+    from{margin-right: 100%;}
+    to{margin-right: 52.2%;}
+}
+
+.checkbtn{
+    font-size: 50px;
+    color: black;
+    float: right;
+    margin-right: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.check{
+    display: none;
+}
+
+/* Alt under navigationsbaren */
+.content{
+}
+
+.calendar-container{
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: auto;
+    gap: 1px 1px;
+    grid-template-areas: 
+      ". header"
+      "timeslots-container main";
+}
+
+.weekdays,
+.daynumbers{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.daynumbers{
+    min-height: 2em;
+}
+
+.weekdays{
+    background: lightblue;
+}
+
+.header{
+    
+    grid-area: header;
+}
+
+.timeslots-container{
+    
+    grid-area: timeslots-container;
+    justify-content: left;
+}
+
+.timeslots{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeslots li{
+    min-height: 60px;
+}
+
+.timeslots li:after{
+    content: "";
+    position: absolute;
+    left: 51px;
+    width: 100%;
+    height: 1px;
+    background: lightgray;
+    z-index: 1;
+}
+
+.event-container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(36, 1fr);
+    grid-area: main;
+    position: relative;
+}
+
+.slot{
+    position: absolute;
+    background: darkslategray;
+    border-radius: 5px;
+    z-index: 5;
+    color: white;
+    font-size: 12px;
+}
+
+.slot-1{
+    height: 120px;
+    grid-row: 4;
+    grid-column: 2;
+    background: red;
+    margin-left: 40px;
+}
+
+.slot-2{
+    height: 720px;
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: 80px;
+    background: green;
+}
+
+.slot-3{
+    height: 240px;
+    grid-row: 4;
+    grid-column: 2;
+    margin-left: 120px;
+    background: green;
+}
+
+.slot-4{
+    height: 180px;
+    grid-row: 16;
+    grid-column: 2;
+    margin-left: 160px;
+    background: red;
+}
+
+.slot-5{
+    height: 60px;
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: 40px;
+    background: green;
+}
+
+.slot-6{
+    height: 120px;
+    grid-row: 10;
+    grid-column: 2;
+    margin-left: 40px;
+    background: red;
+}
+
+.slot-7{
+    height: 420px;
+    grid-row: 16;
+    grid-column: 2;
+    margin-left: 40px;
+    background: green;
+}
+
+.slot-8{
+    height: 60px;
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: 120px;
+    background: red;
+}
+
+.slot-9{
+    height: 120px;
+    grid-row: 16;
+    grid-column: 2;
+    margin-left: 120px;
+    background: red;
+}
+
+.slot-10{
+    height: 180px;
+    grid-row: 20;
+    grid-column: 2;
+    margin-left: 120px;
+    background: green;
+}
+
+.slot-11{
+    height: 260px;
+    grid-row: 24;
+    grid-column: 2;
+    margin-left: 120px;
+    background: red;
+}
+
+.slot-12{
+    height: 300px;
+    grid-row: 1;
+    grid-column: 2;
+    margin-left: 160px;
+    background: green;
+}
+
+.slot-13{
+    height: 260px;
+    grid-row: 24;
+    grid-column: 2;
+    margin-left: 160px;
+    background: green;
+}
